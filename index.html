@@ -25,6 +25,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
 	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/animate.css">
 
 </head>
 
@@ -67,19 +68,43 @@
 				<nav role='navigation'>
 					<div id="menuToggle">
 
-						<input type="checkbox" />
-
+						<input class="checkbox" type="checkbox" />
+						<i class="arrow"></i>
 						<span></span>
 						<span></span>
 						<span></span>
 						
-						<ul id="menu">
-							<a href="#"><li>HOME</li></a>
-							<a href="#"><li>CONTACT</li></a>
-						</ul>
+						
+						
+						<div class="menu" id="menu">
+							<div class="row row--1">
+								<ul class="col-md-5">
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Отзывы</a></li>
+									<li><a href="#">Вакансии</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+								<ul class="col-md-5">
+									<li><a href="#">Услуги</a></li>
+									<li><a href="#">Инструкции</a></li>
+									<li><a href="#">Документы</a></li>
+									<li><a href="#">Тарифы</a></li>
+								</ul>
+							</div>
+						<div class="row row--2"><ul class="col-md-5">
+									<li><a href="#">Личный кабинет</a></li>
+									<li><a href="#">Подключиться</a></li>
+									<li><a href="#">Техподдержка</a></li>
+									<li><a href="#">База знаний</a></li>
+								</ul>
+								<ul class="col-md-5">
+									<li><a href="#">+7 (928) 506-67-00</a></li>
+									<li><a href="#">Задать вопрос</a></li>
+								</ul></div>
+						</div>
 					</div>
 				</nav>
-				<div class="nav-toggle__links">
+				<div class="nav-toggle__links bounceInUp animated">
 					<ul>
 						<li><a href="#">О компании</a></li>
 						<li><a href="#">Техподдержка</a></li>

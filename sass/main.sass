@@ -191,6 +191,23 @@ section
 	color: #444
 	font-size: 13px
 	margin-top: 0
+.accordion-panel
+	ul
+		&:before
+			position: absolute
+    	top: 409px
+    	left: 52px
+    	display: block
+    	width: 10px
+    	height: 10px
+    	content: " "
+    	-webkit-transform: rotate(143deg) skew(16deg)
+    	-moz-transform: rotate(132deg) skew(0deg)
+    	-ms-transform: rotate(132deg) skew(0deg)
+    	-o-transform: rotate(132deg) skew(0deg)
+   		transform: rotate(132deg) skew(0deg)
+    	background-color: #2a8881
+
 .accordion-toggle 
 	margin: 0 auto 
 	width: 100% 
@@ -201,7 +218,7 @@ section
 .accordion-link1 
 	position: relative
 	color: #fff
-	font-size: 14px
+	font-size: 18px
 	margin: 0px
 	padding: 30px 7px
 	cursor:pointer
@@ -217,7 +234,7 @@ section
 .accordion-link2
 	position: relative
 	color: #fff
-	font-size: 14px
+	font-size: 18px
 	margin: 0px
 	padding: 30px 7px
 	cursor:pointer
@@ -305,15 +322,7 @@ section
     &:first-child
       -webkit-transform-origin: 0% 0%
       transform-origin: 0% 0%
-  //   &:nth-last-child(2)
-  //     -webkit-transform-origin: 0% 100%
-  //     transform-origin: 0% 100%
-  // input:checked ~ span
-  //   opacity: 0
-  //   -webkit-transform: rotate(45deg) translate(-2px, -1px)
-  //   transform: rotate(45deg) translate(-2px, -1px)
-  //   background: #232323
-  //   visibility: hidden
+  //  
 
     // &:nth-last-child(3)
     // 	visibility: hidden

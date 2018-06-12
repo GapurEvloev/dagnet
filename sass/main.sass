@@ -81,6 +81,7 @@ li
   height: 1000px
   float: left
   overflow: hidden
+  box-shadow: 9px 0 9px 0 #00000040
 .nav-toggle__bg 
   background-image: url(../img/Bitmap.png) 
   margin-top: -376px
@@ -126,7 +127,9 @@ li
 	color: #fff
 	font-family: Roboto;
 	font-style: normal;
-
+	transition: ease-out
+	&:hover, &:focus
+		transform: timetranslateY(-20px)
 	.nolimit
 		margin: 0
 		font-weight: 300;
@@ -196,6 +199,20 @@ section
 	align-items: center			
 .accordion-panel
 	ul
+		&:before
+			position: absolute
+	    top: 295px
+	    left: 52px
+	    display: block
+	    width: 10px
+	    height: 10px
+	    content: " "
+	    -webkit-transform: rotate(143deg) skew(16deg)
+	    -moz-transform: rotate(132deg) skew(0deg)
+	    -ms-transform: rotate(132deg) skew(0deg)
+	    -o-transform: rotate(132deg) skew(0deg)
+	   	transform: rotate(132deg) skew(0deg)
+	    background-color: #2a8881
 		padding: 0
 		margin: 0
 	li
@@ -212,21 +229,8 @@ section
 	color: #444
 	font-size: 13px
 	margin-top: 0
-.accordion-panel
-	&:before
-			position: absolute
-    	top: 409px
-    	left: 52px
-    	display: block
-    	width: 10px
-    	height: 10px
-    	content: " "
-    	-webkit-transform: rotate(143deg) skew(16deg)
-    	-moz-transform: rotate(132deg) skew(0deg)
-    	-ms-transform: rotate(132deg) skew(0deg)
-    	-o-transform: rotate(132deg) skew(0deg)
-   		transform: rotate(132deg) skew(0deg)
-    	background-color: #2a8881
+
+		
 
 .accordion-toggle 
 	margin: 0 auto 
@@ -555,7 +559,7 @@ span
   top: 0
   left: -75%
   transition: 0.5s ease-in-out
-  z-index: 2
+  z-index: 12
   /*cubic-bezier(0.77,0.2,0.05,1.0);*/
   > div > ul
     margin-top: 50px
@@ -595,7 +599,7 @@ span
     height: 100%
     left: 0
     top: 0
-    background-color: #ccc
+    background-color: #efefef
   img
     height: 100%
     width: 100%
@@ -626,19 +630,25 @@ span
 
 .second-active
   z-index: 9
-.slide__item1
+.slide__item
 	margin: 30px 0 0 30px
+	width: 410px
+	height: 410px
 	overflow: hidden
+	float: left
+.slide__item1
+	
 	width: 410px
 	height: 410px
 	background-image: url(../img/Object.png)
-	background-color: #eee
+	background-color: #fff
 	background-size: contain 
 	background-repeat: no-repeat
 	transition: all .5s
 	float: left
 	&:hover, &:focus
 		transform: scale(1.1)
+		
 
 .slide__item2
 	margin: 30px 0 0 30px
@@ -646,7 +656,7 @@ span
 	width: 410px
 	height: 410px
 	background-image: url(../img/Mask.png)
-	background-color: #eee
+	background-color: #fff
 	background-size: contain 
 	background-repeat: no-repeat
 	float: left		
@@ -657,8 +667,8 @@ span
 	width: 850px
 	height: 410px
 	background-image: url(../img/Map.png)
-	background-color: #eee
-	background-size: contain 
+	background-color: #fff
+	background-size: cover 
 	background-repeat: no-repeat
 	float: left		
 //slider end

@@ -55,7 +55,7 @@ $(".left-arrow").click(moveLeft);
 
 $(".right-arrow").click(moveRight);
 
-var timer = setInterval(moveRight, 4000);
+var timer = setInterval(moveRight, 40000);
 $(function() {
 
 

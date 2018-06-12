@@ -40,11 +40,12 @@ html, body
 body
 	padding: 0
 	font-size: 16px
-	min-width: 320px
+	min-width: 1924px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
+
 li
 	list-style-type: none
 .img-responsive
@@ -63,7 +64,7 @@ li
 	padding-top: 22px
 	text-align: center
 	width: 112px
-	z-index: 11
+	z-index: 99
 	
 	height: 1000px
 	background-color: #fff
@@ -74,21 +75,37 @@ li
   width: 43px
   height: 148px
   margin-left: 29px
-  margin-bottom: 127px	
+  margin-bottom: 12px	
 .nav-toggle
-	background-image: url(../img/Bitmap.png) 
-	background-position: 50% 100%
-	background-repeat: no-repeat
-	width: 422px
-	background-size: cover
-	height: 1000px
-	// overflow: hidden
-	float: left
-
-	&:hover
-		
-	// width: 24%
+  width: 422px
+  height: 1000px
+  float: left
+  overflow: hidden
+.nav-toggle__bg 
+  background-image: url(../img/Bitmap.png) 
+  margin-top: -376px
+  width: 100%
+  height: 100%
+  background-position: center
+  background-size: cover
+  transition: all .5s
+// .nav-toggle__bg	
+// 	background-image: url(../img/Bitmap.png)	
+// 	height: 100%
+//   width: 100%
+// 	background-position: 50% 50%
+// 	transition: transform .5s;
+.nav-toggle:hover .nav-toggle__bg,
+.nav-toggle:focus .nav-toggle__bg 
+  transform: scale(1.1)
+// .hd
+// 	position: absolute
+// 	top: 10px
+// 	left: 10px
 .nav-toggle__links
+	position: relative
+	top: -13px
+	z-index: 1
 	ul
 		margin: 10px 0  10px 38px
 	li
@@ -102,11 +119,14 @@ li
 		font-size: 14px
 		color: #fff	
 .nav-toggle__text	
-	padding-top: 40px
-	padding-left: 15px
+	position: relative
+	z-index: 1
+	top: 40px
+	left: 32px
 	color: #fff
 	font-family: Roboto;
 	font-style: normal;
+
 	.nolimit
 		margin: 0
 		font-weight: 300;
@@ -118,6 +138,7 @@ li
 		font-size: 55px;	
 		margin: 0
 	.speed
+		width: 350px
 		font-family: Roboto
 		font-style: normal
 		Font-Size: 15px
@@ -192,8 +213,7 @@ section
 	font-size: 13px
 	margin-top: 0
 .accordion-panel
-	ul
-		&:before
+	&:before
 			position: absolute
     	top: 409px
     	left: 52px
@@ -279,50 +299,51 @@ section
 .checkbox
 	background-color: #fff
 //navbar start//
-#menuToggle
-  display: block
-  position: relative
-  top: 5px
-  left: 15px
-  z-index: 1
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
-  input
-    display: block
-    width: 45px
-    height: 62px
-    position: absolute
-    top: -7px
-    left: -5px
-    cursor: pointer
-    opacity: 0
-    // hide this
-    z-index: 2
-    // and place it over the hamburger
-    -webkit-touch-callout: none
-  span
-    display: block
-    width: 25px
-    height: 2px
-    margin-bottom: 5px
-    position: relative
-    left: 12px
-    top: 27px
-    background: #fff
-    border-radius: 3px
-    z-index: 1
-    -webkit-transform-origin: 4px 0px
-    transform-origin: 4px 0px
-    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
-    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
-    &:first-child
-      -webkit-transform-origin: 0% 0%
-      transform-origin: 0% 0%
-  //  
+// #menuToggle
+//   display: block
+//   position: relative
+//   top: 5px
+//   left: 15px
+//   z-index: 1
+//   -webkit-user-select: none
+//   -moz-user-select: none
+//   -ms-user-select: none
+//   user-select: none
+//   input
+//     display: block
+//     width: 45px
+//     height: 62px
+//     position: absolute
+//     top: -7px
+//     left: -5px
+//     cursor: pointer
+//     opacity: 0
+//     // hide this
+//     z-index: 2
+//     // and place it over the hamburger
+//     -webkit-touch-callout: none
+//   span
+//     display: block
+//     width: 25px
+//     height: 2px
+//     margin-bottom: 5px
+//     position: relative
+//     left: 12px
+//     top: 27px
+//     background: #fff
+//     border-radius: 3px
+//     z-index: 1
+//     -webkit-transform-origin: 4px 0px
+//     transform-origin: 4px 0px
+//     -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+//     transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+//     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease
+//     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+//     &:first-child
+//       -webkit-transform-origin: 0% 0%
+//       transform-origin: 0% 0%
+
+
 
     // &:nth-last-child(3)
     // 	visibility: hidden
@@ -340,168 +361,306 @@ section
 // But let's hide the middle one.
 
 // And the last one should go the other direction
-#menuToggle
-  span:nth-last-child(2)
-    -webkit-transform-origin: 0 100%
-    -ms-transform-origin: 0 100%
-    transform-origin: 0 100%
-  input:checked ~ span
-    opacity: 1
-    -webkit-transform: rotate(-40deg) translate(2px, 4px)
-    -ms-transform: rotate(-40deg) translate(2px, 4px)
-    transform: rotate(-40deg) translate(2px, 4px)
-    background-color: #fff
-    width: 15px
-    &:nth-last-child(3)
-      opacity: 1
-      -webkit-transform: rotate(0deg) translate(8px, -3px)
-      -ms-transform: rotate(0deg) translate(8px, -3px)
-      transform: rotate(0deg) translate(8px, -3px)
-      width: 25px
-    &:nth-last-child(2)
-      opacity: 1
-      -webkit-transform: rotate(40deg) translate(-2px, -11px)
-      -ms-transform: rotate(40deg) translate(-2px, -11px)
-      transform: rotate(40deg) translate(-2px, -11px)
+// #menuToggle
+//   span:nth-last-child(2)
+//     -webkit-transform-origin: 0 100%
+//     -ms-transform-origin: 0 100%
+//     transform-origin: 0 100%
+//   input:checked ~ span
+//     opacity: 1
+    
+//     transform: rotate(-40deg) translate(1px, 4px)
+//     background-color: #fff
+//     width: 15px
+//     &:nth-last-child(3)
+//       opacity: 1
+      
+//       transform: rotate(0deg) translate(8px, -3px)
+//       width: 25px
+//     &:nth-last-child(2)
+//       opacity: 1
+//       -webkit-transform: rotate(40deg) translate(-2px, -11px)
+//       -ms-transform: rotate(40deg) translate(-2px, -11px)
+//       transform: rotate(40deg) translate(-3px, -11px)
 
-#menu
-  position: absolute
-  width: 600px
-  height: 1000px
-  margin: -26px 0 0 -50px
-  // padding: 40px
-  // padding-top: 125px
-  background: #cdcdba
-  list-style-type: none
-  -webkit-transform-origin: 0% 0%
-  transform-origin: 0% 0%
-  -webkit-transform: translate(-100%, 0)
-  transform: translate(-100%, 0)
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
-  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
-  li
-    padding: 10px 0
-    font-size: 1.2rem
-    font-family: 'Roboto', sans-serif
-.menu
-	.row--1
-		padding-left: 80px
-		padding-top: 100px
-	.row--2
-		padding-left: 80px
-		padding-top: 30px	
+// #menu2
+//   position: absolute
+//   width: 550px
+//   height: 1000px
+//   margin: -26px 0 0 -50px
+//   // padding: 40px
+//   // padding-top: 125px
+//   background: #ccc
+//   list-style-type: none
+//   -webkit-transform-origin: 0% 0%
+//   transform-origin: 0% 0%
+//   -webkit-transform: translate(-100%, 0)
+//   transform: translate(-100%, 0)
+//   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+//   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+//   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+//   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1)
+//   li
+//     padding: 10px 0
+//     font-size: 1.2rem
+// //     font-family: 'Roboto', sans-serif
+// .menu
+// 	a
+// 		color: #000
+// 		font-size: 16px
+// 	.row--1
+// 		padding-left: 80px
+// 		padding-top: 100px
+// 	.row--2
+// 		padding-left: 80px
+// 		padding-top: 30px	
 		
-#menuToggle input:checked ~ #menu
-  -webkit-transform: scale(1, 1)
-  transform: scale(1, 1)
-  opacity: 1
+// #menuToggle input:checked ~ #menu
+//   -webkit-transform: scale(1, 1)
+//   transform: scale(1, 1)
+//   opacity: 1
 
 //burger start
 
-.section
-  height: 50vh
-  background-color: #7b1fa2
-  display: flex
-  justify-content: center
-  align-items: center
+// .section
+//   height: 50vh
+//   background-color: #7b1fa2
+//   display: flex
+//   justify-content: center
+//   align-items: center
 
-.menu-btn
+// .menu-btn
+//   display: block
+//   width: 50px
+//   height: 50px
+//   border-radius: 50%
+//   position: relative
+//   span
+//     position: absolute
+//     top: 50%
+//     margin-top: -1px
+//     left: 50%
+//     margin-left: -10px
+//     width: 20px
+//     height: 2px
+//     background-color: #fff
+//     &::before, &::after
+//       position: absolute
+//       top: 50%
+//       margin-top: -1px
+//       left: 50%
+//       margin-left: -10px
+//       width: 20px
+//       height: 2px
+//       background-color: #fff
+//     &::before, &::after
+//       content: ''
+//       display: block
+//       transition: 0.2s
+//     &::before
+//       transform: translateY(-5px)
+//     &::after
+//       transform: translateY(5px)
+
+// .menu-btn_active span
+//   &:before
+//     transform: rotate(-35deg)
+//     width: 10px
+//     transform-origin: left bottom
+//   &:after
+//     transform: rotate(35deg)
+//     width: 10px
+//     transform-origin: left top
+
+// .menu-block
+//   display: flex
+//   justify-content: center
+//   align-items: center
+
+// .menu-nav
+//   background-color: #fff
+//   height: 50px
+
+// .menu-nav__link
+//   display: inline-block
+//   text-decoration: none
+//   color: #fff
+//   margin-right: 20px
+//   transition: 0.5s
+//   transform-origin: right center
+//   transform: translateX(50%)
+//   opacity: 0
+
+// .menu-nav__link_active
+//   transform: translateX(0%)
+//   opacity: 1
+// //burger end
+// //bounceinup
+// @keyframes slideInUp
+//   from
+//     transform: translate3d(0, 100%, 0)
+//     visibility: visible
+
+//   to
+//     transform: translate3d(0, 0, 0)
+
+//кхи ца1 сайдбар
+#item
+  margin-top: 10px
+  margin-left: 10px
+  z-index: 1
+
+#menu-toggle
+  cursor: pointer
+
+
+.bg
+  min-height: 20px
+  background: #002222
+  z-index: -1
+
+span
   display: block
-  width: 50px
-  height: 50px
-  border-radius: 50%
+  width: 33px
+  height: 4px
+  margin-bottom: 6px
   position: relative
-  span
-    position: absolute
-    top: 50%
-    margin-top: -1px
-    left: 50%
-    margin-left: -10px
-    width: 20px
-    height: 2px
-    background-color: #fff
-    &::before, &::after
-      position: absolute
-      top: 50%
-      margin-top: -1px
-      left: 50%
-      margin-left: -10px
-      width: 20px
-      height: 2px
-      background-color: #fff
-    &::before, &::after
-      content: ''
-      display: block
-      transition: 0.2s
-    &::before
-      transform: translateY(-5px)
-    &::after
-      transform: translateY(5px)
+  top: 20px
+  left: 20px
+  background: #fff
+  border-radius: 3px
+  z-index: 999
+  transform-origin: 4px 0px
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease
 
-.menu-btn_active span
-  &:before
-    transform: rotate(-35deg)
-    width: 10px
-    transform-origin: left bottom
-  &:after
-    transform: rotate(35deg)
-    width: 10px
-    transform-origin: left top
-
-.menu-block
-  display: flex
-  justify-content: center
-  align-items: center
-
-.menu-nav
-  background-color: #fff
-  height: 50px
-
-.menu-nav__link
-  display: inline-block
-  text-decoration: none
-  color: #fff
-  margin-right: 20px
-  transition: 0.5s
-  transform-origin: right center
-  transform: translateX(50%)
-  opacity: 0
-
-.menu-nav__link_active
-  transform: translateX(0%)
-  opacity: 1
-//burger end
-//bounceinup
-@keyframes bounceInUp
-  from,
-  60%,
-  75%,
-  90%,
-  to
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-
-  from
-    opacity: 0
-    transform: translate3d(0, 3000px, 0)
-
-  60%
+.uncollapse > span
+  transform: rotate(-40deg) translate(0px,7px)
+  background: #fff
+  width: 20px
+  &:nth-last-child(2)
     opacity: 1
-    transform: translate3d(0, -20px, 0)
+    transform: rotate(0) translate(11px,-3px)
+    width: 34px
+  &:nth-last-child(1)
+    opacity: 1
+    transform: rotate(40deg) translate(-2px,-13px)
+   
 
-  75%
-    transform: translate3d(0, 10px, 0)
+#menu
 
-  90%
-    transform: translate3d(0, -5px, 0)
+  position: absolute
+  height: 1000px
+  width: 600px
+  background: #ccc
+  top: 0
+  left: -75%
+  transition: 0.5s ease-in-out
+  z-index: 2
+  /*cubic-bezier(0.77,0.2,0.05,1.0);*/
+  > div > ul
+    margin-top: 50px
+  &.show
+    left: 0
+.row--1
+	padding-top: 120px
+.row__ul
+	padding-left: 33px
+	width: 230px
+	li
+  	line-height: 36px
+	a
+		text-decoration: none
+		color: #000
+		font-size: 18px
+		font-weight: 500
+#menu2
+	position: absolute
+	top: 0
+	padding-left: 150px
+	width: 640px
 
-  to
-    transform: translate3d(0, 0, 0)
+//кхи ца1 сайдбар
 
+//slider start
+.carousel-wrap
+  position: relative
+  overflow: hidden
+  margin-left: -200px
+  background-color: #FFF
+  height: 900px
+  width: 1000px
+  .slide
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background-color: #ccc
+  img
+    height: 100%
+    width: 100%
+  .arrow
+    position: absolute
+    left: 90%
+    top: 50%
+    margin-top: -15px
+    height: 60px
+    width: 60px
+    background-image: url(../img/next.png)
+    // border: 1px solid transaprent
+    // border-top: 1px solid #FFF
+    // border-right: 1px solid #FFF
+    cursor: pointer
+    z-index: 11
 
-.bounceInUp
-  animation-name: bounceInUp
-//bounceinup
+// .left-arrow
+//   left: 13px
+//   transform: rotate(225deg)
+
+// .right-arrow
+//   right: 13px
+//   transform: rotate(45deg)
+
+.active
+  z-index: 10
+
+.second-active
+  z-index: 9
+.slide__item1
+	margin: 30px 0 0 30px
+	overflow: hidden
+	width: 410px
+	height: 410px
+	background-image: url(../img/Object.png)
+	background-color: #eee
+	background-size: contain 
+	background-repeat: no-repeat
+	transition: all .5s
+	float: left
+	&:hover, &:focus
+		transform: scale(1.1)
+
+.slide__item2
+	margin: 30px 0 0 30px
+	overflow: hidden
+	width: 410px
+	height: 410px
+	background-image: url(../img/Mask.png)
+	background-color: #eee
+	background-size: contain 
+	background-repeat: no-repeat
+	float: left		
+
+.slide__item3
+	margin: 30px 0 0 30px
+	overflow: hidden
+	width: 850px
+	height: 410px
+	background-image: url(../img/Map.png)
+	background-color: #eee
+	background-size: contain 
+	background-repeat: no-repeat
+	float: left		
+//slider end
 
 @import "media" // Всегда в конце
